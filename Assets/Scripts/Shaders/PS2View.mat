@@ -70,15 +70,15 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Inten: 1.06
+    - _Inten: 2.07
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SharpeningSize: 0.0000398
+    - _SharpeningSize: 0.0000284
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Spread: 0.422
+    - _Spread: 0.802
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
