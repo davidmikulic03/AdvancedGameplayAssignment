@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TheTomb.unity
+    guid: 450f1b4725cb1cf42a73b5846dac17be
   m_configObjects: {}

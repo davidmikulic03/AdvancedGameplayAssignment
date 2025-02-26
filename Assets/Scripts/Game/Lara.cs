@@ -32,6 +32,9 @@ namespace Game {
 
             public bool Pause => m_lara.m_pause.triggered;
 
+            public bool Run => m_lara.m_run.triggered;
+            public bool IsRunning => m_lara.m_run.ReadValue<float>() > 0.5f;
+
             #endregion
 
             public LaraEvent(Lara lara) {
@@ -46,10 +49,11 @@ namespace Game {
         private InputAction m_interact;
         private InputAction m_jump;
         private InputAction m_pause;
+        private InputAction m_run;
 
         private static Lara sm_instance;
 
-        public const float MOVE_SPEED = 4.0f;
+        public float MOVE_SPEED = 4.0f;
 
         #region Properties
 
@@ -71,6 +75,7 @@ namespace Game {
             m_interact = pi.actions["Interact"];
             m_jump = pi.actions["Jump"];
             m_pause = pi.actions["Pause"];
+            m_run = pi.actions["Run"];
 
             PushEvent(new ExplorationEvent(this));
         }

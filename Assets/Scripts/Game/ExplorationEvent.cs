@@ -52,6 +52,9 @@ namespace Game {
             if (Pause) {
                 PausePopup.Create<PausePopup>(Lara);
             }
+            if (Run) {
+                Lara.PushEvent(new RunEvent(Lara));
+            } 
         }
 
         public override bool IsDone() {

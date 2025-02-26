@@ -570,7 +570,7 @@ namespace Game
 
             // create textures and materials
             Material[] materials = new Material[iNumTextures];
-            Material tombMaterial = AssetDatabase.LoadAssetAtPath<Material>("Assets/Materials/TombMaterial.mat");
+            Material tombMaterial = Resources.Load<Material>("Materials/TombMaterial");
             for (int i = 0; i < iNumTextures; ++i)
             {
                 Texture2D tex = new Texture2D(256, 256);
