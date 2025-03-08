@@ -6,6 +6,8 @@ namespace Game
 {
     public class JumpEvent : Lara.LaraEvent
     {
+        public bool bCanExtraJump = true;
+
         private Vector3 m_vVelocity;
         private float   m_fTime;
 
@@ -29,11 +31,17 @@ namespace Game
             base.OnUpdate();
 
             // wait for initial jump a bit
-            if (m_fTime > 0.4f)
+            if (m_fTime > 0.4f || !bCanExtraJump)
             {
                 // add gravity
                 m_vVelocity += Vector3.down * 9.82f * Time.deltaTime;
                 Controller.Move(m_vVelocity * Time.deltaTime);
+            }
+
+            if(Jump && bCanExtraJump) {
+                OnBegin(true);
+                m_fTime = 0.0f;
+                bCanExtraJump = false;
             }
 
             // add time
